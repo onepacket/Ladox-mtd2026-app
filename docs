@@ -43,3 +43,10 @@ newman run docs/postman/Ladox_MockSuite.postman_collection.json \
   -e docs/postman/env/local.postman_environment.json \
   --reporters cli,html,json
 Reports will appear in /docs/results/ by default.
+
+🏁 License & Ownership
+
+© 2025 Ladox Systems Ltd.
+Internal use only. Redistribution prohibited without written authorization.
+
+Motto: We Live To Serve.
