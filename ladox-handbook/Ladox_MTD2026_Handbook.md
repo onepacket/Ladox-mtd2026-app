@@ -115,3 +115,94 @@ Response:
   "scope": "read write",
   "expires_in": 3600
 }
+
+##🧪 Testing & Validation
+Postman & Newman Workflows
+
+Import Postman collection:
+👉 Postman Collection
+
+Test suite includes:
+
+Token generation
+
+Expense retrieval
+
+Quarterly submission
+
+Final declaration simulation
+
+Automate with Newman:
+
+newman run app/tests/postman_collection.json -e app/tests/postman_environment.json
+
+Curl Commands
+
+Sample validation for final declaration:
+
+curl -X POST http://localhost:3000/income-tax-mtd/final-declaration \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer user_001_acf824e9-80fe-4465-96f6-be8278c0c847" \
+  -d '{
+    "userId": "user_001",
+    "taxYear": "2025-2026",
+    "finalFigures":{"income":52000.00,"expenses":13750.50,"netProfit":38249.50}
+  }'
+
+📈 Metrics & Debugging
+
+The /metrics endpoint provides insights into submission activity and server health.
+
+Metric	Description
+acceptedCount	Number of successful submissions
+rejectedCount	Number of rejected submissions
+avgProcessingTime	Average latency per submission
+uptime	Server uptime (seconds)
+
+Audit logs are stored under /logs/audit.log and track all API activity:
+
+[2025-10-17T00:36:59.472Z] POST /income-tax-mtd/final-declaration mode=random 200
+[2025-10-17T00:41:47.314Z] POST /income-tax-mtd/final-declaration mode=random 400 E322
+
+🚀 Deployment Readiness Checklist
+Item	Status
+Environment variables configured (.env)	✅
+MongoDB running	✅
+OAuth keys (sandbox) generated	✅
+Server port accessible	✅
+Postman tests passing	✅
+Logs writing to /logs/	✅
+🏢 About Ladox Ltd
+
+Ladox Ltd is a UK-based fintech startup dedicated to making digital tax compliance simple, secure, and accessible.
+We believe that by embracing automation, AI, and intuitive design — we empower small businesses and self-employed individuals to thrive.
+
+💬 “We live to save.”
+
+🤝 Contributing
+
+We welcome improvements, fixes, and suggestions from the Ladox developer community.
+
+Fork the repository:
+👉 Ladox MTD2026 App on GitHub
+
+Create a new branch:
+
+git checkout -b docs/update-ladox-handbook
+
+
+Commit and push your updates.
+
+Open a Pull Request on GitHub.
+
+🕓 All documentation contributions are reviewed within 3 business days.
+
+🧾 Version Control
+
+Current version: v5.0.0 — October 2025
+
+Maintainer: Kaydee Dzvuke, CTO — Ladox Ltd
+
+Format: Enterprise Markdown, GitHub Wiki–ready
+
+<p align="center"> <img src="assets/qr_ladox.png" alt="Ladox QR" width="120"><br> <em>Scan to visit <a href="https://www.ladox.co.uk">ladox.co.uk</a></em><br> 💜 <strong>We live to save</strong> </p> ```
