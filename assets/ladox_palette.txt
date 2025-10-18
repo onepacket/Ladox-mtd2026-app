@@ -1,0 +1,18 @@
+{
+  "primary": {
+    "purple": "#5300BC",
+    "mint": "#CAFFC1"
+  },
+  "accent": {
+    "orange": "#FF8C42",
+    "lightPurple": "#E7DDF3",
+    "lightestPurple": "#F1EEF4"
+  },
+  "background": {
+    "base": "#F6F6F6"
+  },
+  "text": {
+    "primary": "#5300BC",
+    "secondary": "#4B4B4B"
+  }
+}
