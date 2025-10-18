@@ -117,12 +117,12 @@ Response:
 }
 ```
 ## 🧪 Testing & Validation
-Postman & Newman Workflows
+###Postman & Newman Workflows
 
-Import Postman collection:
+1. Import Postman collection:
 👉 Postman Collection
 
-Test suite includes:
+2. Test suite includes:
 
 Token generation
 
@@ -132,7 +132,7 @@ Quarterly submission
 
 Final declaration simulation
 
-Automate with Newman:
+3. Automate with Newman:
 
 newman run app/tests/postman_collection.json -e app/tests/postman_environment.json
 
