@@ -164,49 +164,52 @@ The /metrics endpoint provides insights into submission activity and server heal
 
 
 Audit logs are stored under /logs/audit.log and track all API activity:
-
+```bash
 [2025-10-17T00:36:59.472Z] POST /income-tax-mtd/final-declaration mode=random 200
 [2025-10-17T00:41:47.314Z] POST /income-tax-mtd/final-declaration mode=random 400 E322
+```
 
-🚀 Deployment Readiness Checklist
-Item	Status
-Environment variables configured (.env)	✅
-MongoDB running	✅
-OAuth keys (sandbox) generated	✅
-Server port accessible	✅
-Postman tests passing	✅
+##🚀 Deployment Readiness Checklist
+
+| Item | Status |
+|---------|-----------|
+| Environment variables configured (.env)|	✅ |
+| MongoDB running |✅ |
+| OAuth keys (sandbox) generated|	✅ |
+| Server port accessible|	✅ |
+| Postman tests passing	| ✅ |
 Logs writing to /logs/	✅
-🏢 About Ladox Ltd
+
+## 🏢 About Ladox Ltd
 
 Ladox Ltd is a UK-based fintech startup dedicated to making digital tax compliance simple, secure, and accessible.
 We believe that by embracing automation, AI, and intuitive design — we empower small businesses and self-employed individuals to thrive.
 
 💬 “We live to save.”
 
-🤝 Contributing
+## 🤝 Contributing
 
 We welcome improvements, fixes, and suggestions from the Ladox developer community.
 
-Fork the repository:
+1. Fork the repository:
 👉 Ladox MTD2026 App on GitHub
 
-Create a new branch:
-
+2. Create a new branch:
+``` bash
 git checkout -b docs/update-ladox-handbook
+```
+3. Commit and push your updates.
 
-
-Commit and push your updates.
-
-Open a Pull Request on GitHub.
+4. Open a Pull Request on GitHub.
 
 🕓 All documentation contributions are reviewed within 3 business days.
 
-🧾 Version Control
+## 🧾 Version Control
 
-Current version: v5.0.0 — October 2025
+#### Current version:### v5.0.0 — October 2025
 
-Maintainer: Kaydee Dzvuke, CTO — Ladox Ltd
+#### Maintainer:#### Kaydee Dzvuke, CTO — Ladox Ltd
 
-Format: Enterprise Markdown, GitHub Wiki–ready
+#### Format:#### Enterprise Markdown, GitHub Wiki–ready
 
 <p align="center"> <img src="assets/qr_ladox.png" alt="Ladox QR" width="120"><br> <em>Scan to visit <a href="https://www.ladox.co.uk">ladox.co.uk</a></em><br> 💜 <strong>We live to save</strong> </p> ```
