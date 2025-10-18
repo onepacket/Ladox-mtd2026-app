@@ -15,18 +15,21 @@
 
 ## 📖 Table of Contents
 1. [⚙️ Executive Summary](#-executive-summary)
-2. [🧱 System Architecture](#-system-architecture)
+2. [🧰 Why We Built Ladox](#-why-we-built-ladox).
+   - [Software that Creates Digital Records](software-that-creates-digital-records).
+   - [Software that Connects to Your Records (Bridging Software)](software-that-connects-to-your-records-\(bridging-software\)).
+4. [🧱 System Architecture](#-system-architecture)
    - [Legacy Mock Server (v4)](#legacy-mock-server-v4)
    - [Modern Backend (v5 – FastAPI & MongoDB)](#modern-backend-v5--fastapi--mongodb)
    - [Performance Benchmark](#performance-benchmark)
-3. [🧩 API & Endpoints](#-api--endpoints)
-4. [🧪 Testing & Validation](#-testing--validation)
+5. [🧩 API & Endpoints](#-api--endpoints)
+6. [🧪 Testing & Validation](#-testing--validation)
    - [Postman & Newman Workflows](#postman--newman-workflows)
    - [Curl Commands](#curl-commands)
-5. [📈 Metrics & Debugging](#-metrics--debugging)
-6. [🚀 Deployment Readiness Checklist](#-deployment-readiness-checklist)
-7. [🏢 About Ladox Ltd](#-about-ladox-ltd)
-8. [🤝 Contributing](#-contributing)
+7. [📈 Metrics & Debugging](#-metrics--debugging)
+8. [🚀 Deployment Readiness Checklist](#-deployment-readiness-checklist)
+9. [🏢 About Ladox Ltd](#-about-ladox-ltd)
+10. [🤝 Contributing](#-contributing)
 
 ---
 
@@ -38,6 +41,20 @@ This handbook provides an internal technical reference for developers, testers, 
 The mock suite is designed to simulate real HMRC endpoints, OAuth flows, and submission journeys for **quarterly updates**, **final declarations**, and **digital record** testing.
 
 ---
+## 🧰 Why We Built Ladox
+The UK’s Making Tax Digital (MTD) initiative requires businesses and the self-employed to
+maintain digital financial records and submit tax information electronically.  
+To support this, HMRC recognises two main software categories:  
+
+
+### Software that Creates Digital Records
+
+
+### Software that Connects to Your Records (Bridging Software)
+
+Ladox was designed to do both — enabling full digital record creation **and** bridging for
+those still using spreadsheets or legacy tools.
+
 
 ## 🧱 System Architecture
 
