@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/Purple.png" alt="Ladox Logo" width="180">
+  <img src="assets/ladox_logo_400x100.png" alt="Ladox Logo" width="180">
 </p>
 
 # 🧾 Ladox HMRC Developer & Operations Handbook  
