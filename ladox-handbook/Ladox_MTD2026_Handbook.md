@@ -115,7 +115,7 @@ Response:
   "scope": "read write",
   "expires_in": 3600
 }
----
+```
 ## 🧪 Testing & Validation
 Postman & Newman Workflows
 
