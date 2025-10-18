@@ -160,6 +160,14 @@ rejectedCount	Number of rejected submissions
 avgProcessingTime	Average latency per submission
 uptime	Server uptime (seconds)
 
+| Metric | Description |
+|---------|-----------|-------------|
+| acceptedCount | Number of successful submissions |
+| rejectedCount | Number of rejected submissions |
+| avgProcessingTime | Average latency per submission |
+| uptime| Server uptime (seconds) |
+
+
 Audit logs are stored under /logs/audit.log and track all API activity:
 
 [2025-10-17T00:36:59.472Z] POST /income-tax-mtd/final-declaration mode=random 200
