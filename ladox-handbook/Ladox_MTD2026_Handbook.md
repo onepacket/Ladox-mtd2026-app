@@ -42,21 +42,44 @@ The mock suite is designed to simulate real HMRC endpoints, OAuth flows, and sub
 
 ---
 ## 🧰 Why We Built Ladox
-The UK’s Making Tax Digital (MTD) initiative requires businesses and the self-employed to
-maintain digital financial records and submit tax information electronically.  
-To support this, HMRC recognises two main software categories:  
 
+The UK’s **Making Tax Digital (MTD)** initiative is transforming how individuals and small businesses report their income and expenses to HMRC.  
+From **April 2026**, most sole traders and landlords will be required to **maintain digital records** and **submit quarterly updates** through approved MTD-compatible software.
 
-### Software that Creates Digital Records
+To support this, **HMRC recognises two main software categories:**
 
-Ladox was designed to do both — enabling full digital record creation **and** bridging for
-those still using spreadsheets or legacy tools.
+---
 
-### Software that Connects to Your Records (Bridging Software)
+### 🧾 Software that Creates Digital Records
+This software allows users to **create, store, and manage** their income and expense data directly within a digital environment.  
+Typical features include:
 
-Ladox was designed to do both — enabling full digital record creation **and** bridging for
-those still using spreadsheets or legacy tools.
+- Automatic transaction import from business bank accounts  
+- Receipt and invoice scanning (OCR integration)  
+- Manual entry of income and expenses  
+- Built-in quarterly submission and final declaration workflows  
 
+> ✅ **Ladox** provides all of the above — acting as a complete digital record-keeping solution that’s natively aligned with MTD 2026.
+
+---
+
+### 🔗 Software that Connects to Your Records (Bridging Software)
+This software integrates with existing accounting tools — such as spreadsheets or legacy systems — to connect and send data directly to HMRC.  
+It’s ideal for businesses and accountants that want to maintain their current record-keeping workflows.
+
+Core capabilities include:
+- Secure integration with spreadsheets or CSV data sources  
+- Transformation of records into HMRC-compliant submission payloads  
+- Preservation of digital links between source and submission  
+- Support for quarterly updates and final declarations  
+
+> 💡 **Ladox** operates in hybrid mode — functioning both as a *digital records system* and as *bridging software* that syncs with existing bookkeeping tools.
+
+---
+
+Ladox was designed to do both — enabling full digital record creation **and** bridging for those still using spreadsheets or legacy accounting tools.
+
+---
 
 ## 🧱 System Architecture
 
