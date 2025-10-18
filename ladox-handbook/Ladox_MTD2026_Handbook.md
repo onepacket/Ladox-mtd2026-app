@@ -133,13 +133,14 @@ Response:
 - Final declaration simulation
 
 3. Automate with Newman:
-
-newman run app/tests/postman_collection.json -e app/tests/postman_environment.json
-
-Curl Commands
+```bash
+  newman run app/tests/postman_collection.json -e app/tests/postman_environment.json
+```
+### Curl Commands
 
 Sample validation for final declaration:
 
+``` bash
 curl -X POST http://localhost:3000/income-tax-mtd/final-declaration \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer user_001_acf824e9-80fe-4465-96f6-be8278c0c847" \
@@ -148,8 +149,8 @@ curl -X POST http://localhost:3000/income-tax-mtd/final-declaration \
     "taxYear": "2025-2026",
     "finalFigures":{"income":52000.00,"expenses":13750.50,"netProfit":38249.50}
   }'
-
-📈 Metrics & Debugging
+```
+## 📈 Metrics & Debugging
 
 The /metrics endpoint provides insights into submission activity and server health.
 
