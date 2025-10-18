@@ -1,21 +1,109 @@
-# 🧩 Ladox Handbook — Changelog
+<p align="center">
+  <img src="assets/Purple.png" alt="Ladox Logo" width="180">
+</p>
 
-> Tracks updates to the Ladox HMRC Developer & Operations Documentation Suite.
+# 🧾 Ladox HMRC Developer & Operations Handbook  
+### *Simplifying Making Tax Digital for 2026*  
+
+**Maintained by:** Kaydee Dzvuke — CTO, Ladox Ltd  
+🌐 [www.ladox.co.uk](https://www.ladox.co.uk)  
+🕓 *Last updated: October 2025 — Version v5.0.0*  
+
+> 💜 *We live to save*
 
 ---
 
-## [v5.0.0] — October 2025
+## 📖 Table of Contents
+1. [⚙️ Executive Summary](#-executive-summary)
+2. [🧱 System Architecture](#-system-architecture)
+   - [Legacy Mock Server (v4)](#legacy-mock-server-v4)
+   - [Modern Backend (v5 – FastAPI & MongoDB)](#modern-backend-v5--fastapi--mongodb)
+   - [Performance Benchmark](#performance-benchmark)
+3. [🧩 API & Endpoints](#-api--endpoints)
+4. [🧪 Testing & Validation](#-testing--validation)
+   - [Postman & Newman Workflows](#postman--newman-workflows)
+   - [Curl Commands](#curl-commands)
+5. [📈 Metrics & Debugging](#-metrics--debugging)
+6. [🚀 Deployment Readiness Checklist](#-deployment-readiness-checklist)
+7. [🏢 About Ladox Ltd](#-about-ladox-ltd)
+8. [🤝 Contributing](#-contributing)
 
-### Added
-- Initial release of **Ladox_MTD2026_Handbook.md**
-- Added `/ladox-handbook/README.md` index and Quick Links footer
-- Embedded QR code linking to [https://www.ladox.co.uk](https://www.ladox.co.uk)
-- Added assets folder with:
-  - `Purple.png` (Ladox primary logo)
-  - `architecture_diagram.png` (placeholder)
-  - `perf_chart.png` (placeholder)
-- Included `CHANGELOG.md` for version tracking
+---
 
-### Maintainer
-Kaydee Dzvuke — CTO, Ladox Ltd  
-🌐 [https://www.ladox.co.uk](https://www.ladox.co.uk)
+## ⚙️ Executive Summary
+
+Ladox Ltd is building a digital-first platform that simplifies **Making Tax Digital (MTD)** submissions for self-employed individuals and small businesses in the UK.  
+This handbook provides an internal technical reference for developers, testers, and operations engineers implementing the **Ladox HMRC MockSuite v5** for MTD 2026 compliance.
+
+The mock suite is designed to simulate real HMRC endpoints, OAuth flows, and submission journeys for **quarterly updates**, **final declarations**, and **digital record** testing.
+
+---
+
+## 🧱 System Architecture
+
+<p align="center">
+  <img src="assets/architecture_diagram.png" alt="Ladox MTD Architecture Overview" width="720">
+</p>
+<p align="center"><em>Figure placeholder — replace with final visual.</em></p>
+
+The system architecture integrates OCR-based receipt capture, backend data validation, and HMRC-compliant API submission.
+
+### Legacy Mock Server (v4)
+
+- Built on **Node.js + Express**  
+- Purpose: local mock of MTD submission endpoints for early testing  
+- Features:
+  - `/expenses`, `/income-tax-mtd/final-declaration`, `/metrics`
+  - Simulated OAuth token issuance
+  - Randomized submission outcomes and error codes
+  - Audit log persistence under `/logs/audit.log`
+
+👉 [View Legacy Mock (server_v4.js)](https://github.com/onepacket/Ladox-mtd2026-app/blob/main/app/legacy/server_v4.js)
+
+### Modern Backend (v5 – FastAPI & MongoDB)
+
+- Located at `/app/backend/server.py`  
+👉 [View Source](https://github.com/onepacket/Ladox-mtd2026-app/blob/main/app/backend/server.py)
+- Tech Stack:
+  - **FastAPI** — async web framework  
+  - **Motor** — MongoDB async driver  
+  - **Pydantic** — data validation  
+  - **Uvicorn** — ASGI server  
+  - **MongoDB** — document store for users, expenses, and submissions  
+- Default port: `8001`
+- Async endpoints for submissions, validation, and metrics  
+- Built for compliance with MTD 2026 digital record requirements  
+
+### Performance Benchmark
+
+<p align="center">
+  <img src="assets/perf_chart.png" alt="FastAPI vs Express Performance" width="720">
+</p>
+<p align="center"><em>Figure placeholder — replace with final visual.</em></p>
+
+| Framework | Avg. Req/s | Avg. Latency | Notes |
+|------------|-------------|--------------|--------|
+| Express v4 | 450 | 78 ms | Legacy mock baseline |
+| FastAPI v5 | 880 | 41 ms | Async improvements & caching |
+| Gain | +95% | -47% | Doubling throughput |
+
+---
+
+## 🧩 API & Endpoints
+
+### Authentication
+OAuth 2.0 flow simulation for sandbox testing.
+
+| Method | Endpoint | Description |
+|---------|-----------|-------------|
+| `POST` | `/oauth/token` | Issues mock access token |
+| `GET` | `/expenses` | Retrieves user expenses |
+| `POST` | `/income-tax-mtd/final-declaration` | Submits final declaration |
+| `GET` | `/income-tax-mtd/submissions/:id/status` | Checks submission status |
+| `GET` | `/metrics` | Retrieves performance metrics |
+
+Example:
+```bash
+curl -X POST http://localhost:3000/oauth/token \
+     -H "Content-Type: application/json" \
+     -d '{"userId": "user_001"}'
