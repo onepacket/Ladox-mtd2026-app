@@ -124,13 +124,13 @@ Response:
 
 2. Test suite includes:
 
-Token generation
+- Token generation
 
-Expense retrieval
+- Expense retrieval
 
-Quarterly submission
+- Quarterly submission
 
-Final declaration simulation
+- Final declaration simulation
 
 3. Automate with Newman:
 
