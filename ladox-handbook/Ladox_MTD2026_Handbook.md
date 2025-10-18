@@ -206,10 +206,8 @@ git checkout -b docs/update-ladox-handbook
 
 ## 🧾 Version Control
 
-#### Current version:### v5.0.0 — October 2025
-
-#### Maintainer:#### Kaydee Dzvuke, CTO — Ladox Ltd
-
-#### Format:#### Enterprise Markdown, GitHub Wiki–ready
+- **Current version:** v5.0.0 — October 2025
+- **Maintainer:** Kaydee Dzvuke, CTO — Ladox Ltd
+- **Format:** Enterprise Markdown, GitHub Wiki–ready
 
 <p align="center"> <img src="assets/qr_ladox.png" alt="Ladox QR" width="120"><br> <em>Scan to visit <a href="https://www.ladox.co.uk">ladox.co.uk</a></em><br> 💜 <strong>We live to save</strong> </p> ```
