@@ -115,8 +115,8 @@ Response:
   "scope": "read write",
   "expires_in": 3600
 }
-
-##🧪 Testing & Validation
+---
+## 🧪 Testing & Validation
 Postman & Newman Workflows
 
 Import Postman collection:
