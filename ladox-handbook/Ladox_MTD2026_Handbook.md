@@ -17,7 +17,7 @@
 1. [⚙️ Executive Summary](#-executive-summary)
 2. [🧰 Why We Built Ladox](#-why-we-built-ladox).
    - [Software that Creates Digital Records](#software-that-creates-digital-records).
-   - [Software that Connects to Your Records (Bridging Software)](#software-that-connects-to-your-records-\(bridging-software\)).
+   - [Software that Connects to Your Records (Bridging Software)](#software-that-connects-to-your-records-(bridging-software)).
 4. [🧱 System Architecture](#-system-architecture)
    - [Legacy Mock Server (v4)](#legacy-mock-server-v4)
    - [Modern Backend (v5 – FastAPI & MongoDB)](#modern-backend-v5--fastapi--mongodb)
