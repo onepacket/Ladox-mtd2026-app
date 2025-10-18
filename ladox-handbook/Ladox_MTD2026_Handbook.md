@@ -154,14 +154,9 @@ curl -X POST http://localhost:3000/income-tax-mtd/final-declaration \
 
 The /metrics endpoint provides insights into submission activity and server health.
 
-Metric	Description
-acceptedCount	Number of successful submissions
-rejectedCount	Number of rejected submissions
-avgProcessingTime	Average latency per submission
-uptime	Server uptime (seconds)
 
 | Metric | Description |
-|---------|-----------|-------------|
+|---------|-----------|
 | acceptedCount | Number of successful submissions |
 | rejectedCount | Number of rejected submissions |
 | avgProcessingTime | Average latency per submission |
