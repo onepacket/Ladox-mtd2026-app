@@ -107,3 +107,11 @@ Example:
 curl -X POST http://localhost:3000/oauth/token \
      -H "Content-Type: application/json" \
      -d '{"userId": "user_001"}'
+
+Response:
+
+{
+  "access_token": "user_001_acf824e9-80fe-4465-96f6-be8278c0c847",
+  "scope": "read write",
+  "expires_in": 3600
+}
