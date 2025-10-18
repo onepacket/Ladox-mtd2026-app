@@ -49,6 +49,8 @@ To support this, HMRC recognises two main software categories:
 
 ### Software that Creates Digital Records
 
+Ladox was designed to do both — enabling full digital record creation **and** bridging for
+those still using spreadsheets or legacy tools.
 
 ### Software that Connects to Your Records (Bridging Software)
 
